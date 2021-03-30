@@ -64,8 +64,15 @@ const CardContainer = styled.div`
 `;
 
 const DetailsBtn = styled.button`
-  background-color: pink;
+  background-color: #FF5C5C96;
+ 
+  border: 0;
   color: white;
-  border-radius: 8px;
+  border-radius: 5px;
+  margin-top:10px;
   font-size: 1.2rem;
+  cursor:pointer;
+  :hover{
+  background-color:#FF5C5C;
+}
 `;
