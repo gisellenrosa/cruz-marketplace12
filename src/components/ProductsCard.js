@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-export class ProductCard extends React.component {
-  state = {
+export default class ProductCard extends React.Component{ 
+   state = {
     cars: []
   };
 
