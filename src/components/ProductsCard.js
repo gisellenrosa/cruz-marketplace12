@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-export class ProductCard extends React.Component {
+export class ProductCard extends React.component {
   state = {
     cars: []
   };
