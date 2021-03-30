@@ -3,14 +3,17 @@ import Header from "../src/components/Header/Header.js";
 import BuyPage from "../src/pages/BuyPage";
 import SellPage from "../src/pages/SellPage";
 import HomePage from "../src/pages/HomePage";
+import DetailsPage from "../src/pages/DetailsPage";
 
 export default class App extends React.Component {
   state = {
-    page: "Home"
+    page: "Home",
+    pageData: null,
   };
 
-  changePage = (newPage) => {
+  changePage = (newPage, data) => {
     this.setState({ page: newPage });
+    this.setState({ pageData: data });
   };
 
   render() {
@@ -18,9 +21,11 @@ export default class App extends React.Component {
       if (this.state.page === "Home") {
         return <HomePage />;
       } else if (this.state.page === "Buy") {
-        return <BuyPage />;
+        return <BuyPage changeToPage={this.changePage} />;
       } else if (this.state.page === "Sell") {
         return <SellPage />;
+      }else if (this.state.page === "Details"){
+        return <DetailsPage car={this.state.pageData}/>
       }
     };
     return (
