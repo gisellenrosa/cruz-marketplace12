@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import axios from "axios";
 
-export class ProductCard extends React.Component {
+export class ProductCard extends React.component {
   state = {
     cars: []
   };
@@ -22,6 +22,7 @@ export class ProductCard extends React.Component {
       })
       .catch((err) => {
         console.log("Tente novamente");
+        alert("Erro, tente novamente mais tarde!")
       });
   };
 
@@ -32,7 +33,9 @@ export class ProductCard extends React.Component {
         <p> Valor: {car.price} </p>
         {/* Função no onclik precisa mudar o estado da tela no App.js */}
         {/* onClick={() => this.nomedafuncaodoDetail(car)} */}
-        <DetailsBtn type="BtnScreen">Ver mais</DetailsBtn>
+        <DetailsBtn  type="BtnScreen"  onClick={() => {
+              this.props.changeToPageAgain("Details", car);
+            }} >Ver mais</DetailsBtn>
       </CardContainer>
     ));
 
