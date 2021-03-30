@@ -1,5 +1,5 @@
 import React from "react";
-import { ProductCard } from "../components/ProductsCard";
+import ProductCard from "../components/ProductsCard";
 import styled from "styled-components";
 
 export default class BuyPage extends React.Component {
