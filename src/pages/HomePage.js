@@ -1,14 +1,28 @@
 import React from "react";
+import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import styled from "styled-components";
 
 const MainDiv = styled.div`
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  display: grid;
+  grid-template-row; 10px 1fr 10px;
+  justify-items: center;
+  align-items: center;
+  
 `;
 
 const ContentImg = styled.img`
   align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 `;
+
+const Intro = styled.h3`
+margin: 0;
+background-color: #E8ECEF;
+`
 
 export default class HomePage extends React.Component {
   render() {
@@ -19,10 +33,10 @@ export default class HomePage extends React.Component {
           style={{ width: "700px" }}
         />
 
-        <h2>
+        <Intro>
           A FutureCar e uma empresa que busca conectar vendedores e compradores
           de carros de forma simples e eficaz
-        </h2>
+        </Intro>
       </MainDiv>
     );
   }
