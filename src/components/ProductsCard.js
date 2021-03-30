@@ -28,7 +28,10 @@ export default class ProductCard extends React.Component{
 
   render() {
     const products = this.state.cars.map((car) => (
-      <CardContainer key={car.id}>
+      
+      <div key={car.id}>
+        <CardImg>  </CardImg>
+        <CardContainer>
         <p> {car.name} </p>
         <p> Valor: {car.price} </p>
         {/* Função no onclik precisa mudar o estado da tela no App.js */}
@@ -37,6 +40,7 @@ export default class ProductCard extends React.Component{
               this.props.changeToPageAgain("Details", car);
             }} >Ver mais</DetailsBtn>
       </CardContainer>
+      </div>
     ));
 
     return <GridCardsContainer>{products}</GridCardsContainer>;
@@ -53,18 +57,25 @@ const GridCardsContainer = styled.div`
 
 const CardContainer = styled.div`
   border-radius: 4%;
-  height: 26vh;
+  height: 10vh;
   display: flex;
-  color: white;
+  color: black;
   margin: 0;
   justify-content: space-between;
   flex-direction: column;
-  background-image: url("https://blog.catarinacarros.com.br/wp-content/uploads/2020/12/carro-fiat-mobi.jpeg");
-  background-size: cover;
+  background-color:white;
+  
+`;
+
+const CardImg = styled.div`
+height: 20vh;
+border-radius: 4%;
+background-size: cover;
+background-image: url("https://blog.catarinacarros.com.br/wp-content/uploads/2020/12/carro-fiat-mobi.jpeg");
 `;
 
 const DetailsBtn = styled.button`
-  background-color: #FF5C5C96;
+  background-color: #FF5C5C99;
  
   border: 0;
   color: white;
