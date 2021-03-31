@@ -2,7 +2,7 @@ import React from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import styled from "styled-components";
 import LogoImg from "../images/futureCar.png"
-
+import Footer from '../components/Footer/Footer'
 const MainDiv = styled.div`
   margin: 0;
   display: grid;
@@ -31,6 +31,7 @@ text-align: center;
 export default class HomePage extends React.Component {
   render() {
     return (
+      <div>
       <MainDiv>
         <ContentImg
           src={LogoImg} style={{ width: "700px" }}
@@ -39,8 +40,11 @@ export default class HomePage extends React.Component {
             A FutureCar e uma empresa que busca conectar vendedores e compradores
             de carros de forma simples e eficaz
           </Intro>
-
       </MainDiv>
+      <div>
+        <Footer/>
+      </div>
+      </div>
     );
   }
 }
