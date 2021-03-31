@@ -128,7 +128,7 @@ export default class SellPage extends React.Component {
         this.setState({ name: "", description: "", price:"", paymentMethod: "", shipping:""})
       })
       .catch((err) => {
-        alert("Ocorreu um erro ao anunciar seu carro , tente mais tarde!");
+        alert("Ocorreu um erro ao anunciar seu carro, verifique se todas as informações foram preenchidas corretamente");
         console.log(err);
       });
   };
