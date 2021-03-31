@@ -8,7 +8,8 @@ const MainDiv = styled.div`
   
   justify-items: center;
   align-items: center;
-  height: 46vh;
+  height: 45vh;
+
 `;
 
 const ContentImg = styled.img`
@@ -21,7 +22,8 @@ const ContentImg = styled.img`
 
 const Intro = styled.h3`
 display: flex;
-margin-top: -300px;
+margin-top: 70px;
+
 background-color: #E8ECEF;
 height: 60px;
 width: 600px;
