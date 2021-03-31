@@ -8,6 +8,7 @@ export default class BuyPage extends React.Component {
     filterMin: "",
     filterMax: "",
     filterName: "",
+    filterListCar:[]
   };
 
   componentDidMount() {
@@ -22,6 +23,7 @@ export default class BuyPage extends React.Component {
       .then((res) => {
         console.log(res.data.cars);
         this.setState({ cars: res.data.cars });
+        this.setState({ filterListCar: res.data.cars });
       })
       .catch((err) => {
         console.log("Tente novamente");
@@ -78,13 +80,15 @@ export default class BuyPage extends React.Component {
     }
     return filter;
   };
-
-  render() {
-    const FilterList = this.FilterList(
+  FilterClick = () => {
+    this.setState({ filterListCar: this.FilterList(
       this.state.filterMin,
       this.state.filterMax,
-      this.state.filterName
-    );
+      this.state.filterName)});
+  };
+
+  render() {
+   
 
     return (
       <BuyContainer>
@@ -114,11 +118,12 @@ export default class BuyPage extends React.Component {
               onChange={this.onChangeFilterName}
             />
           </LabelFilter>
+          <button onClick={this.FilterClick}>Filtrar</button>
           <br/>
           <button onClick={this.cleanFilter}>Limpar Filtro</button>
         </FilterContent>
         <GridCardsContainer>
-          {FilterList.map((car) => {
+          {this.state.filterListCar.map((car) => {
             return (
               <CardContainer key={car.id}>
                 <p>{car.name}</p>
