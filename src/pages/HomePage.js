@@ -1,11 +1,12 @@
 import React from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import styled from "styled-components";
+import LogoImg from "../images/futureCar.png"
 
 const MainDiv = styled.div`
   margin: 0;
   display: grid;
-  grid-template-row; 10px 1fr 10px;
+  grid-template-row: 10px 1fr 10px;
   justify-items: center;
   align-items: center;
   height: 100vh;
@@ -15,7 +16,9 @@ const ContentImg = styled.img`
   align-items: center;
   display: flex;
   justify-content: center;
+
   margin-top: -350px;
+
 `;
 
 const Intro = styled.h3`
@@ -32,11 +35,8 @@ export default class HomePage extends React.Component {
     return (
       <MainDiv>
         <ContentImg
-          src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6af9eda3-f4a0-46a8-96da-d290e1102a19%2Ffuturecar.png?table=block&id=56447354-1825-4378-b040-156dd065d298&width=3100&userId=4c407320-0851-42db-9ba2-49db837591f3&cache=v2"
-          style={{ width: "620px" }}>
-          </ContentImg>
-          
-
+          src={LogoImg} style={{ width: "620px" }}
+          />
           <Intro>
             A FutureCar e uma empresa que busca conectar vendedores e compradores
             de carros de forma simples e eficaz

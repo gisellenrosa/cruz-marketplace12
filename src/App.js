@@ -25,7 +25,7 @@ export default class App extends React.Component {
       } else if (this.state.page === "Sell") {
         return <SellPage />;
       }else if (this.state.page === "Details"){
-        return <DetailsPage car={this.state.pageData}/>
+        return <DetailsPage car={this.state.pageData} changeToPage={this.changePage}/>
       }
     };
     return (
