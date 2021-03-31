@@ -3,7 +3,7 @@ import styled from "styled-components";
 import LogoImg from "../images/futureCar.png"
 
 const MainDiv = styled.div`
-  margin: 0;
+  margin: 100px 0 0 0;
   display: grid;
   grid-template-rows: 30px 1fr 1fr auto;
   justify-items: center;
@@ -32,6 +32,7 @@ padding: 7px;
 export default class HomePage extends React.Component {
   render() {
     return (
+      <div>
       <MainDiv>
         <ContentImg
           src={LogoImg} style={{ width: "620px" }}
@@ -40,8 +41,9 @@ export default class HomePage extends React.Component {
             A FutureCar e uma empresa que busca conectar vendedores e compradores
             de carros de forma simples e eficaz.
           </Intro>
-
       </MainDiv>
+     
+      </div>
     );
   }
 }

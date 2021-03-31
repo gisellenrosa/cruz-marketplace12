@@ -4,6 +4,7 @@ import BuyPage from "../src/pages/BuyPage";
 import SellPage from "../src/pages/SellPage";
 import HomePage from "../src/pages/HomePage";
 import DetailsPage from "../src/pages/DetailsPage";
+import Footer from "./components/Footer/Footer";
 
 export default class App extends React.Component {
   state = {
@@ -32,7 +33,7 @@ export default class App extends React.Component {
       <div>
         <Header changeToPage={this.changePage} />
         {renderPage()}
-        {/* <footer/> */}
+        <Footer/>
       </div>
     );
   }
