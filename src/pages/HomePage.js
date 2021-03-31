@@ -23,7 +23,8 @@ const ContentImg = styled.img`
 const Intro = styled.h3`
 display: flex;
 margin-top: 70px;
-
+border-radius: 10px;
+padding: 7px;
 background-color: #E8ECEF;
 height: 60px;
 width: 600px;
