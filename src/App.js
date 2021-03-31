@@ -5,6 +5,7 @@ import SellPage from "../src/pages/SellPage";
 import HomePage from "../src/pages/HomePage";
 import DetailsPage from "../src/pages/DetailsPage";
 import Footer from "./components/Footer/Footer";
+import styled from "styled-components";
 
 export default class App extends React.Component {
   state = {

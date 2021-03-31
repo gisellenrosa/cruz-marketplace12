@@ -7,9 +7,11 @@ display:flex;
 flex-direction:column;
 `
 const InicioSellPage = styled.div`
-font-size:24px;
+
 color: #4d6f80;
 `
+const Myh2 = styled.h2`
+font-size:18px;`;
 const HrSellPage = styled.hr `
 color: #4d6f80;
 height:2px;
@@ -38,10 +40,10 @@ margin-bottom:16px;
 ` 
 const LabelSellpage = styled.label`
 margin-bottom:12px;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family:'nunito', sans-serif;
 font-weight:bold;
 color:#545454;
-font-size:20px;
+font-size:14px;
 `
 const MetodoPrecoPrazo = styled.div `
 display:flex;
@@ -132,7 +134,7 @@ export default class SellPage extends React.Component {
     return (
       <DivMasterSellPage>
         <InicioSellPage>
-        <h2>Anuncie seu Carro</h2>
+        <Myh2>Anuncie seu Carro</Myh2>
         <HrSellPage/>
         </InicioSellPage>
        
