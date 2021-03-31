@@ -7,7 +7,7 @@
  <a href="#objetivo">Objetivo</a> •
  <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#Demonstração">Demonstração da Aplicação</a> • 
+ <a href="#demonstração">Demonstração</a> • 
  <a href="#contribuição">Contribuição</a> • 
  <a href="#autores">Autores</a> 
 </p>
@@ -46,16 +46,23 @@ Link da API: https://documenter.getpostman.com/view/7549981/Szmb8L5e
 
 Este projeto contou com a contribuição de:
 
-*Giselle Nepomuceno Rosa
-Igor Meira do Nascimento Silva
-Kethreen Lanes Gonçalves
-Sérgio Henrique Nery
-William Gomes Ferreira*
+*Giselle Nepomuceno Rosa*
+
+*Igor Meira do Nascimento Silva*
+
+*Kethreen Lanes Gonçalves*
+
+*Sérgio Henrique Nery*
+
+*William Gomes Ferreira*
 
 ### Autores
+*Giselle Nepomuceno Rosa*
 
-*Giselle Nepomuceno Rosa
-Igor Meira do Nascimento Silva
-Kethreen Lanes Gonçalves
-Sérgio Henrique Nery
-William Gomes Ferreira*
+*Igor Meira do Nascimento Silva*
+
+*Kethreen Lanes Gonçalves*
+
+*Sérgio Henrique Nery*
+
+*William Gomes Ferreira*
