@@ -5,7 +5,9 @@ import SellPage from "../src/pages/SellPage";
 import HomePage from "../src/pages/HomePage";
 import DetailsPage from "../src/pages/DetailsPage";
 import Footer from "./components/Footer/Footer";
-import styled from "styled-components"
+
+import styled from "styled-components";
+
 
 const Appcontainerfull = styled.div `
 display:grid;
