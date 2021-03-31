@@ -15,7 +15,7 @@ const ContentImg = styled.img`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 0;
+  margin: -50px;
   padding: 0;
 `;
 
