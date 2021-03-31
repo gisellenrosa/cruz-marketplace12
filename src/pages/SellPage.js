@@ -70,6 +70,8 @@ height:48px;
 font-weight:bold;
 font-size:20px;
 color:white;
+
+
 `
 
 
