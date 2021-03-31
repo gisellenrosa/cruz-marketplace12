@@ -16,12 +16,14 @@ const ContentImg = styled.img`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top:-250px;
-  padding: 0;
+
+  margin-top: -350px;
+
 `;
 
 const Intro = styled.h3`
-margin: 0;
+display: flex;
+margin-top: -725px;
 background-color: #E8ECEF;
 height: 60px;
 width: 600px;
@@ -34,7 +36,7 @@ export default class HomePage extends React.Component {
       <div>
       <MainDiv>
         <ContentImg
-          src={LogoImg} style={{ width: "700px" }}
+          src={LogoImg} style={{ width: "620px" }}
           />
           <Intro>
             A FutureCar e uma empresa que busca conectar vendedores e compradores

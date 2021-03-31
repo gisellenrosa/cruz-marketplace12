@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import axios from "axios";
+import imageCar from "../images/carro-fiat-mobi.jpeg"
 
 export default class ProductCard extends React.Component{ 
    state = {
@@ -28,14 +29,14 @@ export default class ProductCard extends React.Component{
 
   render() {
     const products = this.state.cars.map((car) => (
-      <CardContainer key={car.id}>
+      <CardContainer key={car.id} onClick={() => {
+        this.props.changeToPageAgain("Details", car);
+      }}>
         <p> {car.name} </p>
-        <p> Valor: {car.price} </p>
-        {/* Função no onclik precisa mudar o estado da tela no App.js */}
-        {/* onClick={() => this.nomedafuncaodoDetail(car)} */}
-        <DetailsBtn  type="BtnScreen"  onClick={() => {
-              this.props.changeToPageAgain("Details", car);
-            }} >Ver mais</DetailsBtn>
+        <PriceLine>
+        <p> Valor: R${car.price} </p>     
+        <DetailsBtn  type="BtnScreen"   >Ver mais</DetailsBtn>
+        </PriceLine>
       </CardContainer>
     ));
 
@@ -50,6 +51,13 @@ const GridCardsContainer = styled.div`
   width: 70vw;
   gap: 2vw;
 `;
+const PriceLine =styled.div`
+color:white;
+justify-content: space-between;
+display: flex;
+flex-direction: column;
+font-size:20px;
+`;
 
 const CardContainer = styled.div`
   border-radius: 4%;
@@ -59,8 +67,9 @@ const CardContainer = styled.div`
   margin: 0;
   justify-content: space-between;
   flex-direction: column;
-  background-image: url("https://blog.catarinacarros.com.br/wp-content/uploads/2020/12/carro-fiat-mobi.jpeg");
+  background-image: url(${imageCar});
   background-size: cover;
+  cursor:pointer;
 `;
 
 const DetailsBtn = styled.button`
