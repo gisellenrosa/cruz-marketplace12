@@ -13,7 +13,9 @@
 </p>
 </h3>
   
-<h4>PROJETO EM ANDAMENTO</h4>
+<hr>
+
+<h3 align="center">PROJETO EM ANDAMENTO</h2>
 
 
 <h1 align="center">FUTURECAR 2</h1>
