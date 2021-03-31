@@ -12,6 +12,7 @@ color: #4d6f80;
 `
 const Myh2 = styled.h2`
 font-size:18px;`;
+
 const HrSellPage = styled.hr `
 color: #4d6f80;
 height:2px;
@@ -20,12 +21,14 @@ opacity:0.3;
 `
 const DivMasterSellPage = styled.div`
 width:50%;
+padding-bottom:100px;
+padding-top:10px;
 margin:auto;
 `
 const InputSellPage = styled.input`
 border-bottom:solid;
 border-width:1px;
-height:40px;
+height:30px;
 border-radius:12px;
 border-color:#d3e2e5;
 margin-bottom:16px;
@@ -54,7 +57,7 @@ justify-content:space-around;
 const SelectSellPag = styled.select`
 border-bottom:solid;
 border-width:1px;
-height:50px;
+height:40px;
 border-radius:12px;
 border-color:#8888;
 margin-bottom:16px;
@@ -64,16 +67,19 @@ border-bottom:none;
 
 const ButtonSellPage = styled.button`
 background-color:#ff7d7d;
-border-radius:15px;
+font-family:'nunito', sans-serif;
+border-radius:10px;
 border-color:transparent;
 width:100%;
-margin-top:16px;
-height:40px;
+margin-top:15px;
 font-weight:bold;
-font-size:20px;
+font-size:18px;
 color:white;
-margin-top:24px;
-margin-bottom:60px;
+transition:300ms;
+cursor: pointer;
+:hover{
+  background-color:#FF5C5C;
+}
 `
 
 
@@ -122,7 +128,7 @@ export default class SellPage extends React.Component {
         this.setState({ name: "", description: "", price:"", paymentMethod: "", shipping:""})
       })
       .catch((err) => {
-        alert("Ocorreu um erro ao anunciar seu carro , tente mais tarde!");
+        alert("Ocorreu um erro ao anunciar seu carro, verifique se todas as informações foram preenchidas corretamente");
         console.log(err);
       });
   };
