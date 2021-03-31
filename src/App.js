@@ -5,7 +5,13 @@ import SellPage from "../src/pages/SellPage";
 import HomePage from "../src/pages/HomePage";
 import DetailsPage from "../src/pages/DetailsPage";
 import Footer from "./components/Footer/Footer";
+import styled from "styled-components"
 
+const Appcontainerfull = styled.div `
+display:grid;
+grid-template-rows: 1fr 6fr 1fr;
+height:100vh;
+`
 export default class App extends React.Component {
   state = {
     page: "Home",
@@ -42,9 +48,5 @@ export default class App extends React.Component {
 }
 
 
-const Appcontainerfull = styled.div `
-display:grid;
-grid-template-rows: 1fr 6fr 1fr;
-height:100vh;
 
-`; 
+ 
