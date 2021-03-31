@@ -51,7 +51,7 @@ Este projeto contou com a contribuição de:
 
 <ul>
  <li><a href="https://www.linkedin.com/in/gisellenrosa/">Giselle Nepomuceno Rosa</a></li>
- <li><a href="https://www.linkedin.com/in/igor-meira-55422a1b5/">IgorMeira do Nascimento Silva</a> </li>
+ <li><a href="https://www.linkedin.com/in/igor-meira-55422a1b5/">Igor Meira do Nascimento Silva</a> </li>
  <li><a href="https://www.linkedin.com/in/kell-lanes-130050176/">Kethreen Lanes Gonçalves</a></li>
  <li><a href="https://www.linkedin.com/in/s%C3%A9rgio-henrique-figorelle-729509133/">Sérgio Henrique Figorelle</a></li>
  <li><a href="https://www.linkedin.com/in/william-gomes-ferreira-713366174/">William Gomes Ferreira</a></li>
