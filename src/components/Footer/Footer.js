@@ -19,8 +19,8 @@ const FooterDiv = styled.footer`
     display:flex;
     align-items:center;
     color:white;
-    font-size:14pt;
-    font-family:cursive;
+    font-size:14px;
+    font-family: "nunito", sans-serif;
 `
 const FooterRedes = styled.div`
 width:33.3%;

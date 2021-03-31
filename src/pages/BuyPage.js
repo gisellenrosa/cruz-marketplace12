@@ -1,7 +1,8 @@
 import React from "react";
 import ProductCard from "../components/ProductsCard";
 import styled from "styled-components";
-import Footer from '../components/Footer/Footer'
+
+
 export default class BuyPage extends React.Component {
   render() {
     return (
@@ -9,9 +10,7 @@ export default class BuyPage extends React.Component {
           <BuyContainer>
         <div>Aqui entra o filtro </div>
         <ProductCard changeToPageAgain={this.props.changeToPage} />
-        <div>
-      <Footer/>
-    </div>
+        
               </BuyContainer>
      
      

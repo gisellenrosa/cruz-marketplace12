@@ -2,7 +2,7 @@ import React from "react";
 import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import styled from "styled-components";
 import LogoImg from "../images/futureCar.png"
-import Footer from '../components/Footer/Footer'
+
 const MainDiv = styled.div`
   margin: 0;
   display: grid;
@@ -43,9 +43,7 @@ export default class HomePage extends React.Component {
             de carros de forma simples e eficaz
           </Intro>
       </MainDiv>
-      <div>
-        <Footer/>
-      </div>
+     
       </div>
     );
   }

@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-import Footer from '../components/Footer/Footer'
+
 export default class SellPage extends React.Component {
   state={
     name: "",

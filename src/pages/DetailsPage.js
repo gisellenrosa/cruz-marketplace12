@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import Footer from '../components/Footer/Footer'
+
+
 const Details = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -118,9 +119,7 @@ export default class DetailsPage extends React.Component {
         >
           Voltar
         </button>
-        <div>
-      <Footer/>
-    </div>
+        
       </div>
     );
   }
