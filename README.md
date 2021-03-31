@@ -48,11 +48,16 @@ Link da API: https://documenter.getpostman.com/view/7549981/Szmb8L5e
 
 Este projeto contou com a contribuição de:
 
-*Giselle Nepomuceno Rosa*
-*Igor Meira do Nascimento Silva*
-*Kethreen Lanes Gonçalves*
-*Sérgio Henrique Nery*
-*William Gomes Ferreira*
+
+<ul>
+ <li>Giselle Nepomuceno Rosa</li>
+ <li>
+  <a href="https://www.linkedin.com/in/igor-meira-55422a1b5/">IgorMeira do Nascimento Silva</a> 
+ </li>
+ <li>Kethreen Lanes Gonçalves</li>
+ <li>Sérgio Henrique Nery</li>
+ <li>William Gomes Ferreira</li>
+</ul>
 
 ### Autores
 
