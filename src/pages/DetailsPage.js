@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import axios from "axios";
+import TheBestCar from "../images/carro2.png"
 
 
 const Details = styled.div`
@@ -47,13 +49,29 @@ export default class DetailsPage extends React.Component {
       alert("Algum campo em branco!");
     }
   };
+  
+  deleteCar = (id) => {
+    if(window.confirm("Deseja mesmo deletar este anúncio?")){
+      axios
+      .delete(`https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars/${id}`)
+      .then((res)=>{
+        console.log(res);
+        alert("Anúncio deletado com sucesso!")
+        this.props.changeToPage("Buy")
+      })
+      .catch((err)=>{
+        console.log(err)
+        alert("Ocorreu um erro ao tentar deletar o anúncio")
+      });
+    }
+  };
 
   render() {
     return (
       <div>
         <Details>
           <div>
-            <img width="80%" src={this.state.Car.imagen}></img>
+            <img width="80%" src={TheBestCar}></img>
             <p>
               <strong>Nome: </strong>
               {this.state.Car.name}
@@ -75,6 +93,11 @@ export default class DetailsPage extends React.Component {
               <strong>Forma de Pagamento: </strong>
               {this.state.Car.paymentMethod}
             </p>
+            <button
+                  onClick={() => this.deleteCar(this.state.Car.id)}
+                >
+                  Deletar
+            </button>
           </div>
           <div>
             <br></br>
