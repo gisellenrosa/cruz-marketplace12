@@ -1,12 +1,11 @@
 import React from "react";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import styled from "styled-components";
 import LogoImg from "../images/futureCar.png"
 
 const MainDiv = styled.div`
-  margin: 0;
+  margin: 100px 0 0 0;
   display: grid;
-  grid-template-row: 10px 1fr 10px;
+  
   justify-items: center;
   align-items: center;
   height: 100vh;
