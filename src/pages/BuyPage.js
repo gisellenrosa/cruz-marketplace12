@@ -130,11 +130,12 @@ export default class BuyPage extends React.Component {
             return (
               <CardContainer key={car.id}>
                 <CardCar>
-                <InfoCard>{car.name}</InfoCard>
-                <PriceLine>
-                  <InfoCard>Valor: R${car.price}</InfoCard>
-                  
-                </PriceLine>
+                  <div>
+                    <InfoCard>{car.name}</InfoCard>
+                  </div>
+                  <PriceLine>
+                    <InfoCard>Valor: R${car.price}</InfoCard> 
+                  </PriceLine>
                 </CardCar>
                 <DetailsBtn
                     type="BtnScreen"
@@ -154,23 +155,25 @@ export default class BuyPage extends React.Component {
   }
 }
 // CSS STYLED COMPONENTS
-const InfoCard = styled.p`
-font-family:'nunito', sans-serif;
-display:flex;
-font-weight:bold;
-margin:5px 6px;
-font-size:16px;
-background-color:#00000060;
-border-radius:5px;
-`;
+
 const CardCar = styled.div`
 background-image: url(${Car});
 background-size:cover;
 background-repeat:no-repeat;
-
- /* background-color: black; */
- height:24vh;
+height:24vh;
+display:grid;
+grid-template-rows:1fr 1fr;
+gap:80px;
  border-radius:10px;
+`;
+const InfoCard = styled.p`
+font-family:'nunito', sans-serif;
+display:flex;
+font-weight:700;
+margin:4px 6px 0 6px;
+font-size:16px;
+border-radius:5px;
+background-color:#ffffff99;
 `;
 const BuyContainer = styled.div`
   display: grid;
@@ -189,17 +192,18 @@ const GridCardsContainer = styled.div`
   overflow-x: hidden;
 `;
 const PriceLine = styled.div`
-  color: white;
+ 
   display: flex;
-  bottom:0;
   flex-direction: column;
+  justify-content:space-evenly;
+ 
 `;
 
 const CardContainer = styled.div`
   
   height:28vh;
   display: flex;
-  color: white;
+  color: black;
   margin: 0;
   justify-content: space-between;
   flex-direction: column;
