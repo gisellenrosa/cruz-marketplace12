@@ -39,6 +39,14 @@ export default class BuyPage extends React.Component {
     this.setState({ filterName: e.target.value });
   };
 
+  cleanFilter = () => {
+    this.setState({
+      filterMin: "",
+      filterMax: "",
+      filterName: "",
+    });
+  };
+
   FilterList = (min, max, name) => {
     let filterByValue;
     if (min || max) {
@@ -106,6 +114,8 @@ export default class BuyPage extends React.Component {
               onChange={this.onChangeFilterName}
             />
           </LabelFilter>
+          <br/>
+          <button onClick={this.cleanFilter}>Limpar Filtro</button>
         </FilterContent>
         <GridCardsContainer>
           {FilterList.map((car) => {
