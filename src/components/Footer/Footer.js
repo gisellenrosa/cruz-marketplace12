@@ -3,12 +3,9 @@ import React from 'react'
 
 
 
-
 const MasterFooter = styled.div`
-position:absolute;
 margin-bottom:0;
 left:0;
-padding-top:14px;
 padding-bottom:0;
 `
 
@@ -42,6 +39,7 @@ const LinksFooter = styled.a`
 text-decoration:none;
 color:white;
 `
+
 
 export default class Footer extends React.Component{ 
     render(){
