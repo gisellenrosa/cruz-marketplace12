@@ -5,7 +5,8 @@ import ImgHeader from "../../images/futurecar-logo.png"
 const HeaderDiv = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 60px 40px 20px 40px;
+  margin: 20px 40px 20px 40px;
+  height: 10vh;
 `;
 
 const Buttons = styled.div`
@@ -34,7 +35,6 @@ transition:300ms;
   opacity:1;
 }
 `;
-
 export default class Header extends React.Component {
   render() {
     return (
