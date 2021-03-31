@@ -30,7 +30,7 @@ border-radius:12px;
 border-color:#d3e2e5;
 margin-bottom:16px;
 ` 
-const InputSellPage2 = styled.input`
+const InputSellPage2 = styled.textarea`
 border-bottom:solid;
 border-width:1px;
 height:120px;
@@ -64,16 +64,16 @@ border-bottom:none;
 
 const ButtonSellPage = styled.button`
 background-color:#ff7d7d;
-border-radius:25px;
+border-radius:15px;
 border-color:transparent;
 width:100%;
 margin-top:16px;
-height:48px;
+height:40px;
 font-weight:bold;
 font-size:20px;
 color:white;
-
-
+margin-top:24px;
+margin-bottom:60px;
 `
 
 

@@ -46,7 +46,8 @@ export default class BuyPage extends React.Component {
       filterMin: "",
       filterMax: "",
       filterName: "",
-    });
+      filterListCar:this.state.cars
+      });
   };
 
   FilterList = (min, max, name) => {
@@ -95,6 +96,14 @@ export default class BuyPage extends React.Component {
         <FilterContent>
           <h2>Filtros:</h2>
           <LabelFilter>
+            Busca por nome:
+            <input
+              type="text"
+              value={this.state.filterName}
+              onChange={this.onChangeFilterName}
+            />
+          </LabelFilter>
+          <LabelFilter>
             Valor mínimo:
             <input
               type="number"
@@ -110,14 +119,7 @@ export default class BuyPage extends React.Component {
               onChange={this.onChangeFilterMax}
             />
           </LabelFilter>
-          <LabelFilter>
-            Busca por nome:
-            <input
-              type="text"
-              value={this.state.filterName}
-              onChange={this.onChangeFilterName}
-            />
-          </LabelFilter>
+          
           <button onClick={this.FilterClick}>Filtrar</button>
           <br/>
           <button onClick={this.cleanFilter}>Limpar Filtro</button>
