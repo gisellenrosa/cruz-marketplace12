@@ -6,7 +6,7 @@ export default class BuyPage extends React.Component {
   state = {
     cars: [],
     filterMin: 1,
-    filterMax: 500000,
+    filterMax: 1000000,
     filterName: "",
   };
 
@@ -57,24 +57,24 @@ export default class BuyPage extends React.Component {
           Valor mínimo:
           <input
             type="number"
-            value={this.props.filterMin}
-            onChange={this.props.onChangeFilterMin}
+            value={this.state.filterMin}
+            onChange={this.onChangeFilterMin}
           />
         </LabelFilter>
         <LabelFilter>
           Valor máximo:
           <input
             type="number"
-            value={this.props.filterMax}
-            onChange={this.props.onChangeFilterMax}
+            value={this.state.filterMax}
+            onChange={this.onChangeFilterMax}
           />
         </LabelFilter>
         <LabelFilter>
           Busca por nome:
           <input
             type="text"
-            value={this.props.filterName}
-            onChange={this.props.onChangeFilterName}
+            value={this.state.filterName}
+            onChange={this.onChangeFilterName}
           />
         </LabelFilter>
         
