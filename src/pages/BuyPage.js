@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
+import Car from "../images/carro.jpg"
 
 export default class BuyPage extends React.Component {
   state = {
@@ -128,10 +129,15 @@ export default class BuyPage extends React.Component {
           {this.state.filterListCar.map((car) => {
             return (
               <CardContainer key={car.id}>
-                <p>{car.name}</p>
-                <PriceLine>
-                  <p>Valor: R${car.price}</p>
-                  <DetailsBtn
+                <CardCar>
+                  <div>
+                    <InfoCard>{car.name}</InfoCard>
+                  </div>
+                  <PriceLine>
+                    <InfoCard>Valor: R${car.price}</InfoCard> 
+                  </PriceLine>
+                </CardCar>
+                <DetailsBtn
                     type="BtnScreen"
                     onClick={() => {
                       this.props.changeToPage("Details", car);
@@ -139,8 +145,8 @@ export default class BuyPage extends React.Component {
                   >
                     Ver mais
                   </DetailsBtn>
-                </PriceLine>
               </CardContainer>
+              
             );
           })}
         </GridCardsContainer>
@@ -149,10 +155,29 @@ export default class BuyPage extends React.Component {
   }
 }
 // CSS STYLED COMPONENTS
+
+const CardCar = styled.div`
+background-image: url(${Car});
+background-size:cover;
+background-repeat:no-repeat;
+height:24vh;
+display:grid;
+grid-template-rows:1fr 1fr;
+gap:80px;
+ border-radius:10px;
+`;
+const InfoCard = styled.p`
+font-family:'nunito', sans-serif;
+display:flex;
+font-weight:700;
+margin:4px 6px 0 6px;
+font-size:16px;
+border-radius:5px;
+background-color:#ffffff99;
+`;
 const BuyContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
-  background-image: linear-gradient(200deg, #e8ecef, white);
   height: 66vh;
   padding-right:1%;
   padding-top:1%;
@@ -167,24 +192,23 @@ const GridCardsContainer = styled.div`
   overflow-x: hidden;
 `;
 const PriceLine = styled.div`
-  color: white;
-  justify-content: space-between;
+ 
   display: flex;
   flex-direction: column;
-  font-size: 20px;
+  justify-content:space-evenly;
+ 
 `;
 
 const CardContainer = styled.div`
-  border-radius: 4%;
-  height: 26vh;
+  
+  height:28vh;
   display: flex;
-  color: white;
+  color: black;
   margin: 0;
   justify-content: space-between;
   flex-direction: column;
-  background-color: gray;
+  background-color: white;
   background-size: cover;
-  cursor: pointer;
 `;
 
 const DetailsBtn = styled.button`
