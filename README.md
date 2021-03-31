@@ -7,7 +7,7 @@
  <a href="#objetivo">Objetivo</a> •
  <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
- <a href="#demonstração">Demonstração</a> • 
+ <a href="#aplicação">Aplicação</a> • 
  <a href="#contribuição">Contribuição</a> • 
  <a href="#autores">Autores</a> 
 </p>
@@ -35,7 +35,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 - [React](https://pt-br.reactjs.org/)
 - [Material-UI](https://material-ui.com/pt/)
 
-### Demonstração da Aplicação
+### Aplicação
 
 -link surge
 
@@ -47,16 +47,13 @@ Link da API: https://documenter.getpostman.com/view/7549981/Szmb8L5e
 Este projeto contou com a contribuição de:
 
 *Giselle Nepomuceno Rosa*
-
 *Igor Meira do Nascimento Silva*
-
 *Kethreen Lanes Gonçalves*
-
 *Sérgio Henrique Nery*
-
 *William Gomes Ferreira*
 
 ### Autores
+
 *Giselle Nepomuceno Rosa*
 
 *Igor Meira do Nascimento Silva*
