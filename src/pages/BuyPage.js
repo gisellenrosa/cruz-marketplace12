@@ -17,5 +17,6 @@ const BuyContainer = styled.div`
   grid-template-columns: 1fr 4fr;
   background-image: linear-gradient(200deg, #e8ecef, white);
   height: 80vh;
+  overflow:auto;
 `;
 
