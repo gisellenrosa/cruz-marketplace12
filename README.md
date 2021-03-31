@@ -57,14 +57,7 @@ Este projeto contou com a contribuição de:
  <li><a href="https://www.linkedin.com/in/william-gomes-ferreira-713366174/">William Gomes Ferreira</a></li>
 </ul>
 
-### Autores
-
-*Giselle Nepomuceno Rosa*
+### Autor
 
 *Igor Meira do Nascimento Silva*
 
-*Kethreen Lanes Gonçalves*
-
-*Sérgio Henrique Figorelle*
-
-*William Gomes Ferreira*
