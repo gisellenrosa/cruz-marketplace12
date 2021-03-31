@@ -50,13 +50,11 @@ Este projeto contou com a contribuição de:
 
 
 <ul>
- <li>Giselle Nepomuceno Rosa</li>
- <li>
-  <a href="https://www.linkedin.com/in/igor-meira-55422a1b5/">IgorMeira do Nascimento Silva</a> 
- </li>
- <li>Kethreen Lanes Gonçalves</li>
- <li>Sérgio Henrique Nery</li>
- <li>William Gomes Ferreira</li>
+ <li><a href="https://www.linkedin.com/in/gisellenrosa/">Giselle Nepomuceno Rosa</a></li>
+ <li><a href="https://www.linkedin.com/in/igor-meira-55422a1b5/">IgorMeira do Nascimento Silva</a> </li>
+ <li><a href="https://www.linkedin.com/in/kell-lanes-130050176/">Kethreen Lanes Gonçalves</a></li>
+ <li><a href="">Sérgio Henrique Nery</a></li>
+ <li><a href="https://www.linkedin.com/in/william-gomes-ferreira-713366174/">William Gomes Ferreira</a></li>
 </ul>
 
 ### Autores
