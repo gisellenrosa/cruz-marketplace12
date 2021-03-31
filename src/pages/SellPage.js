@@ -7,9 +7,11 @@ display:flex;
 flex-direction:column;
 `
 const InicioSellPage = styled.div`
-font-size:24px;
+
 color: #4d6f80;
 `
+const Myh2 = styled.h2`
+font-size:18px;`;
 const HrSellPage = styled.hr `
 color: #4d6f80;
 height:2px;
@@ -28,7 +30,7 @@ border-radius:12px;
 border-color:#d3e2e5;
 margin-bottom:16px;
 ` 
-const InputSellPage2 = styled.input`
+const InputSellPage2 = styled.textarea`
 border-bottom:solid;
 border-width:1px;
 height:120px;
@@ -38,10 +40,10 @@ margin-bottom:16px;
 ` 
 const LabelSellpage = styled.label`
 margin-bottom:12px;
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family:'nunito', sans-serif;
 font-weight:bold;
 color:#545454;
-font-size:20px;
+font-size:14px;
 `
 const MetodoPrecoPrazo = styled.div `
 display:flex;
@@ -62,14 +64,16 @@ border-bottom:none;
 
 const ButtonSellPage = styled.button`
 background-color:#ff7d7d;
-border-radius:25px;
+border-radius:15px;
 border-color:transparent;
 width:100%;
 margin-top:16px;
-height:48px;
+height:40px;
 font-weight:bold;
 font-size:20px;
 color:white;
+margin-top:24px;
+margin-bottom:60px;
 `
 
 
@@ -130,7 +134,7 @@ export default class SellPage extends React.Component {
     return (
       <DivMasterSellPage>
         <InicioSellPage>
-        <h2>Anuncie seu Carro</h2>
+        <Myh2>Anuncie seu Carro</Myh2>
         <HrSellPage/>
         </InicioSellPage>
        

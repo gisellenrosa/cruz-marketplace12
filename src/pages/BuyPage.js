@@ -46,7 +46,8 @@ export default class BuyPage extends React.Component {
       filterMin: "",
       filterMax: "",
       filterName: "",
-    });
+      filterListCar:this.state.cars
+      });
   };
 
   FilterList = (min, max, name) => {
@@ -95,6 +96,14 @@ export default class BuyPage extends React.Component {
         <FilterContent>
           <h2>Filtros:</h2>
           <LabelFilter>
+            Busca por nome:
+            <input
+              type="text"
+              value={this.state.filterName}
+              onChange={this.onChangeFilterName}
+            />
+          </LabelFilter>
+          <LabelFilter>
             Valor mínimo:
             <input
               type="number"
@@ -110,14 +119,7 @@ export default class BuyPage extends React.Component {
               onChange={this.onChangeFilterMax}
             />
           </LabelFilter>
-          <LabelFilter>
-            Busca por nome:
-            <input
-              type="text"
-              value={this.state.filterName}
-              onChange={this.onChangeFilterName}
-            />
-          </LabelFilter>
+          
           <button onClick={this.FilterClick}>Filtrar</button>
           <br/>
           <button onClick={this.cleanFilter}>Limpar Filtro</button>
@@ -147,18 +149,19 @@ export default class BuyPage extends React.Component {
   }
 }
 // CSS STYLED COMPONENTS
-
 const BuyContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
   background-image: linear-gradient(200deg, #e8ecef, white);
-  height: 80vh;
+  height: 66vh;
+  padding-right:1%;
+  padding-top:1%;
 `;
 
 const GridCardsContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 70vw;
+  width: 80vw;
   gap: 2vw;
   overflow: scroll;
   overflow-x: hidden;
@@ -179,7 +182,7 @@ const CardContainer = styled.div`
   margin: 0;
   justify-content: space-between;
   flex-direction: column;
-  background-color: black;
+  background-color: gray;
   background-size: cover;
   cursor: pointer;
 `;
@@ -206,3 +209,4 @@ const LabelFilter = styled.label`
 const FilterContent = styled.div`
   padding: 8px;
 `;
+

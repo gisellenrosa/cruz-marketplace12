@@ -5,29 +5,30 @@ import LogoImg from "../images/futureCar.png"
 const MainDiv = styled.div`
   margin: 100px 0 0 0;
   display: grid;
-  grid-template-rows: 30px 1fr 1fr auto;
+  
   justify-items: center;
   align-items: center;
   height: 45vh;
+
 `;
 
 const ContentImg = styled.img`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: 0;
-  `;
+  margin-top: -300px;
+
+`;
 
 const Intro = styled.h3`
 display: flex;
 margin-top: 70px;
+
 background-color: #E8ECEF;
 height: 60px;
 width: 600px;
 text-align: center;
-border-radius: 10px;
-padding: 7px;
-`;
+`
 
 export default class HomePage extends React.Component {
   render() {
