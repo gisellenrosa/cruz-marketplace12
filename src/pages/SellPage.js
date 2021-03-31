@@ -1,6 +1,6 @@
 import axios from "axios";
 import React from "react";
-
+import Footer from '../components/Footer/Footer'
 export default class SellPage extends React.Component {
   state={
     name: "",
@@ -57,6 +57,7 @@ export default class SellPage extends React.Component {
   
     return (
       <div>
+
         <h1>EM CONSTRUÇÃO</h1>
         <label>Nome</label>
         <input
@@ -89,6 +90,7 @@ export default class SellPage extends React.Component {
 
          <button onClick={this.createCar}>Anunciar Carro</button>
         <h2></h2>
+
       </div>
     );
   }
