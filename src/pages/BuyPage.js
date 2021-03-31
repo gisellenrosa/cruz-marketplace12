@@ -5,8 +5,8 @@ import styled from "styled-components";
 export default class BuyPage extends React.Component {
   state = {
     cars: [],
-    filterMin: 1,
-    filterMax: 1000000,
+    filterMin: "",
+    filterMax: "",
     filterName: "",
   };
 
@@ -39,66 +39,94 @@ export default class BuyPage extends React.Component {
     this.setState({ filterName: e.target.value });
   };
 
-    FilterList = () => {
-    const filterListName = this.state.cars.filter(car => car.name.includes(this.state.filterName))
-    const filterListMin = filterListName.filter(car => car.price >= this.state.filterMin)
-    const filterListMax = filterListMin.filter(car => car.price <= this.state.filterMax)
-    return filterListMax
-  }
+  FilterList = (min, max, name) => {
+    let filterByValue;
+    if (min || max) {
+      // Se min e max estiverem vazios ou = 0. Caso contrário, pula o filtro por valor.
+      filterByValue = this.state.cars.filter((car) => {
+        if (min && !max) {
+          // Se min não estiver vazio ou === 0 e max sim.
+          return car.price >= min;
+        } else if (!min && max) {
+          // Se max não estiver vazio ou === 0 e min sim.
+          return car.price <= max;
+        } else if (min && max) {
+          // Se min e max não estiverem vazios ou !== 0
+          return car.price >= min && car.price <= max;
+        }
+      });
+    } else {
+      filterByValue = this.state.cars;
+    }
+
+    let filter;
+    if (name) {
+      // Se o campo de busca por nome não estiver vazio. Caso contrário, pula o filtro por texto.
+      filter = filterByValue.filter((car) => {
+        return car.name.toLowerCase().includes(`${name.toLowerCase()}`);
+      });
+    } else {
+      filter = filterByValue;
+    }
+    return filter;
+  };
 
   render() {
-    const FilterList = this.FilterList()
+    const FilterList = this.FilterList(
+      this.state.filterMin,
+      this.state.filterMax,
+      this.state.filterName
+    );
 
     return (
       <BuyContainer>
         <FilterContent>
-        <h2>Filtros:</h2>
-        <LabelFilter>
-          Valor mínimo:
-          <input
-            type="number"
-            value={this.state.filterMin}
-            onChange={this.onChangeFilterMin}
-          />
-        </LabelFilter>
-        <LabelFilter>
-          Valor máximo:
-          <input
-            type="number"
-            value={this.state.filterMax}
-            onChange={this.onChangeFilterMax}
-          />
-        </LabelFilter>
-        <LabelFilter>
-          Busca por nome:
-          <input
-            type="text"
-            value={this.state.filterName}
-            onChange={this.onChangeFilterName}
-          />
-        </LabelFilter>
-        
-      </FilterContent>
+          <h2>Filtros:</h2>
+          <LabelFilter>
+            Valor mínimo:
+            <input
+              type="number"
+              value={this.state.filterMin}
+              onChange={this.onChangeFilterMin}
+            />
+          </LabelFilter>
+          <LabelFilter>
+            Valor máximo:
+            <input
+              type="number"
+              value={this.state.filterMax}
+              onChange={this.onChangeFilterMax}
+            />
+          </LabelFilter>
+          <LabelFilter>
+            Busca por nome:
+            <input
+              type="text"
+              value={this.state.filterName}
+              onChange={this.onChangeFilterName}
+            />
+          </LabelFilter>
+        </FilterContent>
         <GridCardsContainer>
           {FilterList.map((car) => {
             return (
-            <CardContainer key={car.id}>
-            <p>{car.name}</p>
-            <PriceLine>
-            <p>Valor: R${car.price}</p>
-            <DetailsBtn
-            type="BtnScreen"
-            onClick={() => {
-              this.props.changeToPage("Details", car);
-            }}
-          >
-            Ver mais
-          </DetailsBtn>
-        </PriceLine>
-      </CardContainer>
-            )
+              <CardContainer key={car.id}>
+                <p>{car.name}</p>
+                <PriceLine>
+                  <p>Valor: R${car.price}</p>
+                  <DetailsBtn
+                    type="BtnScreen"
+                    onClick={() => {
+                      this.props.changeToPage("Details", car);
+                    }}
+                  >
+                    Ver mais
+                  </DetailsBtn>
+                </PriceLine>
+              </CardContainer>
+            );
           })}
-      </GridCardsContainer>
+        </GridCardsContainer>
       </BuyContainer>
     );
   }
