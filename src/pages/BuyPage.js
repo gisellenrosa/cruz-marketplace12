@@ -89,6 +89,7 @@ export default class BuyPage extends React.Component {
       this.state.filterName)});
   };
 
+
   render() {
    
 
@@ -145,6 +146,7 @@ export default class BuyPage extends React.Component {
                   >
                     Ver mais
                   </DetailsBtn>
+                 
               </CardContainer>
               
             );
