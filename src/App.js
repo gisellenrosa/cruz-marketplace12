@@ -33,8 +33,18 @@ export default class App extends React.Component {
       <div>
         <Header changeToPage={this.changePage} />
         {renderPage()}
+    
+    
         <Footer/>
       </div>
     );
   }
 }
+
+
+const Appcontainerfull = styled.div `
+display:grid;
+grid-template-rows: 1fr 6fr 1fr;
+height:100vh;
+
+`; 
