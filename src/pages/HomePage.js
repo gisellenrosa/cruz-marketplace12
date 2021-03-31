@@ -1,5 +1,4 @@
 import React from "react";
-import { unstable_renderSubtreeIntoContainer } from "react-dom";
 import styled from "styled-components";
 import LogoImg from "../images/futureCar.png"
 
@@ -16,10 +15,8 @@ const ContentImg = styled.img`
   align-items: center;
   display: flex;
   justify-content: center;
-
   margin-top: -350px;
-
-`;
+  `;
 
 const Intro = styled.h3`
 display: flex;
@@ -28,7 +25,7 @@ background-color: #E8ECEF;
 height: 60px;
 width: 600px;
 text-align: center;
-`
+`;
 
 export default class HomePage extends React.Component {
   render() {
