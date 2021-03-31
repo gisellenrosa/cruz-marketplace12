@@ -46,7 +46,8 @@ export default class BuyPage extends React.Component {
       filterMin: "",
       filterMax: "",
       filterName: "",
-    });
+      filterListCar:this.state.cars
+      });
   };
 
   FilterList = (min, max, name) => {
