@@ -12,36 +12,12 @@ const CarsContainer = styled.div`
   padding-top: 1%;
 `;
 
-const OrderContainer = styled.div`
-  padding: 0 4%;
-  background-color: #e8ecef;
-  color: #36414f;
-  border-radius: 20px;
-  margin: 4%;
-  border: 1px solid gray;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-
-  h3 {
-    align-self: center;
-    margin-block-start: 16px;
-    margin-block-end: 16px;
-  }
-
-  select {
-    align-self: center;
-    border-radius: 8px;
-    height: 24px;
-  }
-`;
-
 const GridCardsContainer = styled.div`
   grid-area: 1/2/3/3;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2vw;
-  overflow: scroll;
+  overflow-y: auto;
   overflow-x: hidden;
 `;
 
@@ -66,6 +42,12 @@ const FilterContainer = styled.div`
     align-self: center;
     margin-block-start: 16px;
     margin-block-end: 16px;
+  }
+
+  select {
+    align-self: center;
+    border-radius: 8px;
+    height: 24px;
   }
 `;
 
@@ -157,16 +139,12 @@ class Cars extends React.Component {
           <BtnFilterClear onClick={this.props.CleanFilter}>
             Limpar Filtro
           </BtnFilterClear>
-        </FilterContainer>
-        <OrderContainer>
-          
             <h3>Ordenar por:</h3>
             <select onChange={this.onChangeFilter}>
               <option value="Preco">Preço </option>
               <option value="Prazo de Entrega">Prazo de Entrega </option>
             </select>
-          
-        </OrderContainer>
+        </FilterContainer>
         <GridCardsContainer>
           {orderedList.map((car) => {
             return (
