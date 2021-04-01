@@ -34,20 +34,18 @@ const LinksFooter = styled.a`
 export default class Footer extends React.Component {
   render() {
     return (
-            <FooterDiv>
-          <FooterRedes>
-            <LinksFooter href="https://www.facebook.com/">Facebook</LinksFooter>
+      <FooterDiv>
+        <FooterRedes>
+          <LinksFooter href="https://www.facebook.com/">Facebook</LinksFooter>
 
-            <LinksFooter href="https://twitter.com/">Twitter</LinksFooter>
+          <LinksFooter href="https://twitter.com/">Twitter</LinksFooter>
 
-            <LinksFooter href="https://www.instagram.com/">
-              Instagram
-            </LinksFooter>
-          </FooterRedes>
+          <LinksFooter href="https://www.instagram.com/">Instagram</LinksFooter>
+        </FooterRedes>
 
-          <FooterEmail>Contato@Futurecar.com.br</FooterEmail>
-          <FooterNumero>(11) 9 98324-2453</FooterNumero>
-        </FooterDiv>
+        <FooterEmail>Contato@Futurecar.com.br</FooterEmail>
+        <FooterNumero>(11) 9 98324-2453</FooterNumero>
+      </FooterDiv>
     );
   }
 }

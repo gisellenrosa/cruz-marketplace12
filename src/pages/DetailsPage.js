@@ -1,16 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import axios from "axios";
-import TheBestCar from "../images/carro2.png"
+import TheBestCar from "../images/carro2.png";
 
 const Details = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 `;
 const DetailsContainer = styled.div`
-  
   padding: 0 4%;
-  background-color:#f5f6f7;
+  background-color: #f5f6f7;
   color: #36414f;
   border-radius: 20px;
   margin: 0 4%;
@@ -80,23 +79,25 @@ export default class DetailsPage extends React.Component {
       alert("Algum campo em branco!");
     }
   };
-  
+
   deleteCar = (id) => {
-    if(window.confirm("Deseja mesmo deletar este anúncio?")){
+    if (window.confirm("Deseja mesmo deletar este anúncio?")) {
       axios
-      .delete(`https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars/${id}`)
-      .then((res)=>{
-        console.log(res);
-        alert("Anúncio deletado com sucesso!")
-        this.props.changeToPage("Buy")
-      })
-      .catch((err)=>{
-        console.log(err)
-        alert("Ocorreu um erro ao tentar deletar o anúncio")
-      });
+        .delete(
+          `https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars/${id}`
+        )
+        .then((res) => {
+          console.log(res);
+          alert("Anúncio deletado com sucesso!");
+          this.props.changeToPage("Buy");
+        })
+        .catch((err) => {
+          console.log(err);
+          alert("Ocorreu um erro ao tentar deletar o anúncio");
+        });
     }
   };
-  
+
   render() {
     return (
       <div>
@@ -124,27 +125,25 @@ export default class DetailsPage extends React.Component {
               <strong>Forma de Pagamento: </strong>
               {this.state.Car.paymentMethod}
             </p>
-            <BtnDelete
-                  onClick={() => this.deleteCar(this.state.Car.id)}
-                >
-                  Deletar
+            <BtnDelete onClick={() => this.deleteCar(this.state.Car.id)}>
+              Deletar
             </BtnDelete>
           </DetailsContainer>
           <div>
             <br></br>
             <div>
-              <p>Nome:</p>
+              Nome:
               <input value={this.state.InputName} onChange={this.changeName} />
             </div>
             <div>
-              <p>E-mail:</p>
+              E-mail:
               <input
                 value={this.state.InputEmail}
                 onChange={this.changeEmail}
               />
             </div>
             <div>
-              <p>Telefone:</p>
+              Telefone:
               <input
                 type="number"
                 value={this.state.InputPhone}
@@ -152,9 +151,7 @@ export default class DetailsPage extends React.Component {
               />
             </div>
             <div>
-              <p>
-                <p>Deixe sua mensagem:</p>
-              </p>
+              Deixe sua mensagem:
               <textarea
                 value={this.state.TextAreaMessage}
                 onChange={this.changeMessage}
@@ -173,7 +170,6 @@ export default class DetailsPage extends React.Component {
         >
           Voltar
         </button>
-        
       </div>
     );
   }

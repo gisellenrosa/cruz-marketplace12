@@ -59,10 +59,9 @@ const DivSellPage = styled.div`
   font-family: "nunito", sans-serif;
   font-weight: bold;
   color: #545454;
-  font-size: 14px;  
+  font-size: 14px;
   margin: 8px 0;
 `;
-
 
 const SelectSellPag = styled.select`
   border: 1px solid gray;
