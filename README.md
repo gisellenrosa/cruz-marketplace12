@@ -15,7 +15,7 @@
   
 <hr>
 
-<h3 align="center">PROJETO EM ANDAMENTO</h2>
+<h3 align="center">PROJETO FINALIZADO</h2>
 
 
 <h1 align="center">FUTURECAR 2</h1>
@@ -39,7 +39,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 
 ### Aplicação
 
--link surge
+-link Surge: http://great-weather.surge.sh/
 
 Link da API: https://documenter.getpostman.com/view/7549981/Szmb8L5e
 
