@@ -12,7 +12,7 @@ import styled from "styled-components";
 const Appcontainerfull = styled.div `
 display:grid;
 grid-template-rows: 1fr 6fr 1fr;
-height: 100vh;
+height:100vh;
 `
 export default class App extends React.Component {
   state = {
