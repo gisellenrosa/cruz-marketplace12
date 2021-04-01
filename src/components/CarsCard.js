@@ -64,7 +64,7 @@ class CarCard extends React.Component {
             <InfoCard>{car.name}</InfoCard>
           </div>
           <PriceLine>
-            <InfoCard>Valor: R${car.price}</InfoCard>
+            <InfoCard>R$ {car.price},00</InfoCard>
           </PriceLine>
         </CardCar>
           <DetailsBtn
