@@ -3,25 +3,28 @@ import styled from "styled-components";
 import LogoImg from "../images/futureCar.png"
 
 const MainDiv = styled.div`
-  margin: 100px 0 0 0;
+  margin: 180px 0 0 0;
   display: grid;
-  
+  grid-template-rows: 30px 1fr 1fr auto;
   justify-items: center;
   align-items: center;
-  height: 46vh;
+  height: 45vh;
+
 `;
 
 const ContentImg = styled.img`
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-top: -300px;
+  margin-top: 0px;
 
 `;
 
 const Intro = styled.h3`
 display: flex;
-margin-top: -300px;
+margin-top: 70px;
+border-radius: 10px;
+padding: 7px;
 background-color: #E8ECEF;
 height: 60px;
 width: 600px;

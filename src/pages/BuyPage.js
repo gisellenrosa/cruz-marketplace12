@@ -80,6 +80,7 @@ export default class BuyPage extends React.Component {
     return filter;
   };
 
+
   render() {
     let filterListCar = this.FilterList(
       this.state.filterMin,
@@ -105,4 +106,5 @@ export default class BuyPage extends React.Component {
   }
 }
 // CSS STYLED COMPONENTS
+
 const BuyContainer = styled.div``;

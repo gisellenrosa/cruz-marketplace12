@@ -4,7 +4,8 @@ import React from 'react'
 
 
 const MasterFooter = styled.div`
-margin-bottom:0;
+position:fixed;
+bottom:0;
 left:0;
 padding-bottom:0;
 `

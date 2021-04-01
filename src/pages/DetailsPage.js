@@ -48,6 +48,22 @@ export default class DetailsPage extends React.Component {
       alert("Algum campo em branco!");
     }
   };
+  
+  deleteCar = (id) => {
+    if(window.confirm("Deseja mesmo deletar este anúncio?")){
+      axios
+      .delete(`https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars/${id}`)
+      .then((res)=>{
+        console.log(res);
+        alert("Anúncio deletado com sucesso!")
+        this.props.changeToPage("Buy")
+      })
+      .catch((err)=>{
+        console.log(err)
+        alert("Ocorreu um erro ao tentar deletar o anúncio")
+      });
+    }
+  };
 
   deleteCar = (id) => {
     if(window.confirm("Deseja mesmo deletar este anúncio?")){
