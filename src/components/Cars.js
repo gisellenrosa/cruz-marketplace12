@@ -60,7 +60,7 @@ const InputMinMax = styled.div`
 const InputSearch = styled.input`
   border-radius: 10px;
   height: 20px;
-  width: 90%;  
+  width: 90%;
   margin: 8px 0;
 `;
 
@@ -139,11 +139,11 @@ class Cars extends React.Component {
           <BtnFilterClear onClick={this.props.CleanFilter}>
             Limpar Filtro
           </BtnFilterClear>
-            <h3>Ordenar por:</h3>
-            <select onChange={this.onChangeFilter}>
-              <option value="Preco">Preço </option>
-              <option value="Prazo de Entrega">Prazo de Entrega </option>
-            </select>
+          <h3>Ordenar por:</h3>
+          <select onChange={this.onChangeFilter}>
+            <option value="Preco">Preço </option>
+            <option value="Prazo de Entrega">Prazo de Entrega </option>
+          </select>
         </FilterContainer>
         <GridCardsContainer>
           {orderedList.map((car) => {

@@ -9,9 +9,12 @@ const HeaderDiv = styled.div`
 
 const Buttons = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Img = styled.img`
+  height: 70%;
   cursor: pointer;
 `;
 
@@ -38,13 +41,14 @@ export default class Header extends React.Component {
   render() {
     return (
       <HeaderDiv>
-        <Img
-          onClick={() => {
-            this.props.changeToPage("Home");
-          }}
-          src={ImgHeader}
-          style={{ width: "300px" }}
-        />
+        <Buttons>
+          <Img
+            onClick={() => {
+              this.props.changeToPage("Home");
+            }}
+            src={ImgHeader}
+          />
+        </Buttons>
         <Buttons>
           <Button
             onClick={() => {

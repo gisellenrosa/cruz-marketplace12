@@ -80,7 +80,6 @@ export default class BuyPage extends React.Component {
     return filter;
   };
 
-
   render() {
     let filterListCar = this.FilterList(
       this.state.filterMin,
