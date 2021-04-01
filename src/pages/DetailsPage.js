@@ -96,29 +96,13 @@ export default class DetailsPage extends React.Component {
       });
     }
   };
-
-  deleteCar = (id) => {
-    if(window.confirm("Deseja mesmo deletar este anúncio?")){
-      axios
-      .delete(`https://us-central1-labenu-apis.cloudfunctions.net/futureCarTwo/cars/${id}`)
-      .then((res)=>{
-        console.log(res);
-        alert("Anúncio deletado com sucesso!")
-        this.props.changeToPage("Buy")
-      })
-      .catch((err)=>{
-        console.log(err)
-        alert("Ocorreu um erro ao tentar deletar o anúncio")
-      });
-    }
-  };
   
   render() {
     return (
       <div>
         <Details>
           <div>
-            <img width="80%" src={TheBestCar}></img>
+            <img width="80%" src={this.state.Car.image}></img>
             <p>
               <strong>Nome: </strong>
               {this.state.Car.name}

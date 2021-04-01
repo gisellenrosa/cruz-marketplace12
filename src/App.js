@@ -11,7 +11,7 @@ import styled from "styled-components";
 
 const Appcontainerfull = styled.div `
 display:grid;
-grid-template-rows: 1fr 6fr 1fr;
+grid-template-rows: 15% 70% 15%;
 height:100vh;
 `
 export default class App extends React.Component {
@@ -38,13 +38,13 @@ export default class App extends React.Component {
       }
     };
     return (
-      <div>
+      <Appcontainerfull>
         <Header changeToPage={this.changePage} />
         {renderPage()}
     
     
         <Footer/>
-      </div>
+      </Appcontainerfull>
     );
   }
 }

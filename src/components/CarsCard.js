@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Car from "../images/carro.jpg"
+import Car from "../images/carro.jpg";
 
 const CardContainer = styled.div`
   height: 28vh;
@@ -14,31 +14,29 @@ const CardContainer = styled.div`
   cursor: pointer;
 `;
 
-const CardCar = styled.div`
-background-image: url(${Car});
-background-size:cover;
-background-repeat:no-repeat;
-height:24vh;
-display:grid;
-grid-template-rows:1fr 1fr;
-gap:80px;
- border-radius:10px;
+const CardCar = styled.img`
+  height: 20vh;
+  object-fit: cover;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 80px;
+  border-radius: 10px;
 `;
 
 const InfoCard = styled.p`
-font-family:'nunito', sans-serif;
-display:flex;
-font-weight:700;
-margin:4px 6px 0 6px;
-font-size:16px;
-border-radius:5px;
-background-color:#ffffff99;
+  font-family: "nunito", sans-serif;
+  display: flex;
+  font-weight: 700;
+  margin: 4px 6px 0 6px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #ffffff99;
 `;
 
 const PriceLine = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 `;
 
 const DetailsBtn = styled.button`
@@ -59,22 +57,22 @@ class CarCard extends React.Component {
     const car = this.props.car;
     return (
       <CardContainer key={car.id}>
-        <CardCar>
-          <div>
-            <InfoCard>{car.name}</InfoCard>
-          </div>
-          <PriceLine>
-            <InfoCard>R$ {car.price},00</InfoCard>
-          </PriceLine>
-        </CardCar>
-          <DetailsBtn
-            type="BtnScreen"
-            onClick={() => {
-              this.props.changeToPage("Details", car);
-            }}
-          >
-            Ver mais
-          </DetailsBtn>
+        <PriceLine>
+          <InfoCard>{car.name}</InfoCard>
+        </PriceLine>
+        <CardCar src={car.image} />
+        <PriceLine>
+          <InfoCard>R$ {car.price},00</InfoCard>
+        </PriceLine>
+
+        <DetailsBtn
+          type="BtnScreen"
+          onClick={() => {
+            this.props.changeToPage("Details", car);
+          }}
+        >
+          Ver mais
+        </DetailsBtn>
       </CardContainer>
     );
   }
