@@ -7,7 +7,39 @@ const Details = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 `;
+const DetailsContainer = styled.div`
+  
+  padding: 0 4%;
+  background-color:#f5f6f7;
+  color: #36414f;
+  border-radius: 20px;
+  margin: 0 4%;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  height: 30vh;
+  width: 30vh;
+`;
 
+const BtnDelete = styled.button`
+  background-color: #36414f;
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  opacity: 0.9;
+  border: 0;
+  border-radius: 12px;
+  color: white;
+  height: 30px;
+  margin: 2%;
+  align-self: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 300ms;
+  :hover {
+    opacity: 1;
+  }
+`;
 export default class DetailsPage extends React.Component {
   state = {
     Car: this.props.car,
@@ -92,7 +124,7 @@ export default class DetailsPage extends React.Component {
               {this.state.Car.name}
             </p>
           </div>
-          <div>
+          <DetailsContainer>
             <p>
               <strong>Preço: </strong>R$ {this.state.Car.price},00
             </p>
@@ -108,12 +140,12 @@ export default class DetailsPage extends React.Component {
               <strong>Forma de Pagamento: </strong>
               {this.state.Car.paymentMethod}
             </p>
-            <button
+            <BtnDelete
                   onClick={() => this.deleteCar(this.state.Car.id)}
                 >
                   Deletar
-            </button>
-          </div>
+            </BtnDelete>
+          </DetailsContainer>
           <div>
             <br></br>
             <div>
