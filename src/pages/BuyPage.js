@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
+import Cars from "../components/Cars";
 
 export default class BuyPage extends React.Component {
   state = {
@@ -8,7 +9,6 @@ export default class BuyPage extends React.Component {
     filterMin: "",
     filterMax: "",
     filterName: "",
-    filterListCar:[]
   };
 
   componentDidMount() {
@@ -23,7 +23,6 @@ export default class BuyPage extends React.Component {
       .then((res) => {
         console.log(res.data.cars);
         this.setState({ cars: res.data.cars });
-        this.setState({ filterListCar: res.data.cars });
       })
       .catch((err) => {
         console.log("Tente novamente");
@@ -41,13 +40,12 @@ export default class BuyPage extends React.Component {
     this.setState({ filterName: e.target.value });
   };
 
-  cleanFilter = () => {
+  CleanFilter = () => {
     this.setState({
       filterMin: "",
       filterMax: "",
       filterName: "",
-      filterListCar:this.state.cars
-      });
+    });
   };
 
   FilterList = (min, max, name) => {
@@ -81,132 +79,30 @@ export default class BuyPage extends React.Component {
     }
     return filter;
   };
-  FilterClick = () => {
-    this.setState({ filterListCar: this.FilterList(
-      this.state.filterMin,
-      this.state.filterMax,
-      this.state.filterName)});
-  };
 
   render() {
-   
+    let filterListCar = this.FilterList(
+      this.state.filterMin,
+      this.state.filterMax,
+      this.state.filterName
+    );
 
     return (
       <BuyContainer>
-        <FilterContent>
-          <h2>Filtros:</h2>
-          <LabelFilter>
-            Busca por nome:
-            <input
-              type="text"
-              value={this.state.filterName}
-              onChange={this.onChangeFilterName}
-            />
-          </LabelFilter>
-          <LabelFilter>
-            Valor mínimo:
-            <input
-              type="number"
-              value={this.state.filterMin}
-              onChange={this.onChangeFilterMin}
-            />
-          </LabelFilter>
-          <LabelFilter>
-            Valor máximo:
-            <input
-              type="number"
-              value={this.state.filterMax}
-              onChange={this.onChangeFilterMax}
-            />
-          </LabelFilter>
-          
-          <button onClick={this.FilterClick}>Filtrar</button>
-          <br/>
-          <button onClick={this.cleanFilter}>Limpar Filtro</button>
-        </FilterContent>
-        <GridCardsContainer>
-          {this.state.filterListCar.map((car) => {
-            return (
-              <CardContainer key={car.id}>
-                <p>{car.name}</p>
-                <PriceLine>
-                  <p>Valor: R${car.price}</p>
-                  <DetailsBtn
-                    type="BtnScreen"
-                    onClick={() => {
-                      this.props.changeToPage("Details", car);
-                    }}
-                  >
-                    Ver mais
-                  </DetailsBtn>
-                </PriceLine>
-              </CardContainer>
-            );
-          })}
-        </GridCardsContainer>
+        <Cars
+          onChangeFilterName={this.onChangeFilterName}
+          onChangeFilterMin={this.onChangeFilterMin}
+          onChangeFilterMax={this.onChangeFilterMax}
+          CleanFilter={this.CleanFilter}
+          filterName={this.state.filterName}
+          filterMin={this.state.filterMin}
+          filterMax={this.state.filterMax}
+          cars={filterListCar}
+          changeToPage={this.props.changeToPage}
+        />
       </BuyContainer>
     );
   }
 }
 // CSS STYLED COMPONENTS
-const BuyContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 4fr;
-  background-image: linear-gradient(200deg, #e8ecef, white);
-  height: 66vh;
-  padding-right:1%;
-  padding-top:1%;
-`;
-
-const GridCardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 80vw;
-  gap: 2vw;
-  overflow: scroll;
-  overflow-x: hidden;
-`;
-const PriceLine = styled.div`
-  color: white;
-  justify-content: space-between;
-  display: flex;
-  flex-direction: column;
-  font-size: 20px;
-`;
-
-const CardContainer = styled.div`
-  border-radius: 4%;
-  height: 26vh;
-  display: flex;
-  color: white;
-  margin: 0;
-  justify-content: space-between;
-  flex-direction: column;
-  background-color: gray;
-  background-size: cover;
-  cursor: pointer;
-`;
-
-const DetailsBtn = styled.button`
-  background-color: #ff5c5c99;
-  color: white;
-  border: 0;
-  border-radius: 5px;
-  font-size: 1.2rem;
-  cursor: pointer;
-  transition: 300ms;
-  :hover {
-    background-color: #ff5c5c;
-  }
-`;
-
-const LabelFilter = styled.label`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-top: 8px;
-`;
-const FilterContent = styled.div`
-  padding: 8px;
-`;
-
+const BuyContainer = styled.div``;
