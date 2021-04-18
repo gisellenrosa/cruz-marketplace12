@@ -1,5 +1,5 @@
 ## FutureCar - MarketPlace
-[Desgin do Projeto](https://www.figma.com/proto/uqLlCeocIcvja7TV9XK7Tz/FutureCar?node-id=0%3A1)
+
 <p align="center">
  
 <img src="https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F6af9eda3-f4a0-46a8-96da-d290e1102a19%2Ffuturecar.png?table=block&id=56447354-1825-4378-b040-156dd065d298&width=770&userId=0563d14e-668e-4b7e-b319-9b8b6c8a3165&cache=v2" />
@@ -8,24 +8,25 @@
 <h3 align="center">TABELA DE CONTEÚDOS
 <p align="center">
  <a href="#objetivo">Objetivo</a> •
- <a href="#Pré-Requisitos">Pré-Requisitos</a> • 
+ <a href="#design">Design do Projeto</a> •
+ <a href="#pré-requisitos">Pré-Requisitos</a> • 
  <a href="#tecnologias">Tecnologias</a> • 
  <a href="#aplicação">Aplicação</a> • 
- <a href="#contribuição">Contribuição</a> • 
- <a href="#autores">Autores</a> 
+ <a href="#equipe">Equipe</a> • 
 </p>
 </h3>
   
 <hr>
 
-<h3 align="center">PROJETO FINALIZADO</h2>
-
-
 <h1 align="center">FUTURECAR 2</h1>
 
 ### Objetivo
 
-<p>Utilizar as funcionalidades aprendidas na semana 8 para montar um marketplace como projeto de encerramento de módulo. Esse marketplace é uma "facilitadora" que liga um usuário que deseja vender seu carro usado, e um cliente final que deseja comprar as ofertas disponíveis.</p>
+<p>O marketplace é um projeto em grupo, com o objetivo de desenvolver habilidades e praticiar  as funcionalidades aprendidas ao decorrer do curso. Assim  como o objetivo de desenvolver as softs-skills dos integrantes do grupo e a cooperação em equipe.<br> Esse marketplace é uma "facilitadora" que liga um usuário que deseja vender seu carro usado, e um cliente final que deseja comprar as ofertas disponíveis.</p>
+
+### Design
+
+O [Desgin do Projeto](https://www.figma.com/proto/uqLlCeocIcvja7TV9XK7Tz/FutureCar?node-id=0%3A1) foi desenvolvido em conjunto por todos os integrantes do grupo.
 
 ### Pré-requisitos
 
@@ -44,14 +45,12 @@ As seguintes tecnologias foram utilizadas no projeto:
 
 -link Surge: http://great-weather.surge.sh/
 
-Link da API: https://documenter.getpostman.com/view/7549981/Szmb8L5e
+-Link da API: https://documenter.getpostman.com/view/7549981/Szmb8L5e
 
 
-### Contribuição
+### Equipe
 
 Este projeto contou com a contribuição de:
-
-
 <ul>
  <li><a href="https://www.linkedin.com/in/gisellenrosa/">Giselle Nepomuceno Rosa</a></li>
  <li><a href="https://www.linkedin.com/in/igor-meira-55422a1b5/">Igor Meira do Nascimento Silva</a> </li>
