@@ -57,7 +57,3 @@ Este projeto contou com a contribuição de:
  <li><a href="https://www.linkedin.com/in/william-gomes-ferreira-713366174/">William Gomes Ferreira</a></li>
 </ul>
 
-### Autor
-
-*Igor Meira do Nascimento Silva*
-
